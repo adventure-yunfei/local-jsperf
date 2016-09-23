@@ -1,0 +1,44 @@
+{
+  "name": "local-jsperf",
+  "version": "0.0.1",
+  "description": "Build own js performance test site based on Benchmark.js ",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "webpack -w -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adventure-yunfei/local-jsperf.git"
+  },
+  "keywords": [
+    "jsperf",
+    "benchmark"
+  ],
+  "author": "yunfei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adventure-yunfei/local-jsperf/issues"
+  },
+  "homepage": "https://github.com/adventure-yunfei/local-jsperf#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "benchmark": "^2.1.1",
+    "lodash": "^4.16.1",
+    "microtime": "^2.1.1",
+    "platform": "^1.3.1"
+  },
+  "babel": {
+    "presets": [
+      "latest",
+      "react"
+    ]
+  }
+}
