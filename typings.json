@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "benchmark": "registry:dt/benchmark#1.0.0+20160317120654",
+    "node": "registry:dt/node#6.0.0+20160921192128",
+    "vue": "registry:dt/vue#1.0.21+20160720100422"
+  }
+}

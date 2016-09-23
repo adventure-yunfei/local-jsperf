@@ -7,20 +7,39 @@ function _path(relativePath) {
     return path.resolve(ROOT_DIR, relativePath);
 }
 
+function makeStyleLoader (preCssLoader) {
+    preCssLoader = preCssLoader ? ('!' + preCssLoader) : '';
+    return 'style!css!postcss' + preCssLoader;
+}
+
 module.exports = {
-    entry: _path('src/index.js'),
+    entry: _path('src/main.ts'),
     output: {
-        filename: 'test-bundle.js',
+        filename: 'app.js',
         path: _path('build')
     },
     module: {
         loaders: [
             {
-                test: /\.js$/i,
-                exclude: /node_modules/,
-                loader: 'babel'
+                test: /\.ts$/i,
+                loader: 'ts'
+            },
+            {
+                test: /\.less$/i,
+                loader: makeStyleLoader('less')
+            },
+            {
+                test: /\.css$/i,
+                loader: makeStyleLoader()
+            },
+            {
+                test: /\.html$/i,
+                loader: 'html'
             }
         ]
+    },
+    resolve: {
+        extensions: ['', '.ts', '.js']
     },
     plugins: [
         new HtmlWebpackPlugin({
