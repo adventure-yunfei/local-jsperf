@@ -16,7 +16,8 @@ module.exports = {
     entry: _path('src/main.ts'),
     output: {
         filename: 'app.js',
-        path: _path('build')
+        path: _path('build'),
+        publicPath: '/build'
     },
     module: {
         loaders: [

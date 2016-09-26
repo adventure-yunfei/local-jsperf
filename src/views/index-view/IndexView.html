@@ -1,12 +1,9 @@
 <div class="index-view">
-    Test Result:
-    <br/><br/>
+    Test Cases:
 
-    <div class="test-item-list">
-        <div v-for="testItem in testResultItems" class="test-item">
-            {{testItem}}
+    <div class="test-case-list">
+        <div v-for="testCase in testCases" class="test-case-item">
+            <a v-link="{ path: '/test-case/' + encodeURIComponent(testCase.name) }">{{testCase.name}}</a>
         </div>
     </div>
-
-    <div class="test-summary">{{testSummary}}</div>
 </div>
