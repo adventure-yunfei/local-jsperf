@@ -1,7 +1,7 @@
 import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
 import IndexView from './index-view/IndexView'
-import TestCaseView from './test-case-view/TestCaseView'
+import TestSuiteView from './test-case-view/TestSuiteView'
 
 Vue.use(VueRouter);
 
@@ -11,8 +11,8 @@ router.map({
     '/': {
         component: IndexView
     },
-    '/test-case/:testCaseName': {
-        component: TestCaseView
+    '/test-case/:testSuiteName': {
+        component: TestSuiteView
     }
 });
 

@@ -2,8 +2,9 @@
     Test Cases:
 
     <div class="test-case-list">
-        <div v-for="testCase in testCases" class="test-case-item">
-            <a v-link="{ path: '/test-case/' + encodeURIComponent(testCase.name) }">{{testCase.name}}</a>
+        <div v-for="testSuite in testSuites" class="test-case-item">
+            <a v-link="{ path: '/test-case/' + encodeURIComponent(testSuite.name) }">{{testSuite.name}}</a>
+            <p>{{testSuite.desc}}</p>
         </div>
     </div>
 </div>

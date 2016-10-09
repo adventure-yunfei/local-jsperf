@@ -1,3 +1,5 @@
+require('normalize.css');
+
 import * as Vue from 'vue'
 import App from './views/index-view/IndexView';
 import router from './views/router';

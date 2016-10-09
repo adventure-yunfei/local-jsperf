@@ -1,0 +1,26 @@
+<div class="test-case-view">
+    <div class="show-all-test-cases"><a v-link="{ path: '/' }">Show all test cases</a></div>
+
+    <div class="test-case-name">{{testSuite.name}}</div>
+    <p class="test-case-desc">{{testSuite.desc}}</p>
+
+    Test case details:
+    <div class="test-item-info-list">
+        <div v-for="testCase in testSuite.testCases" class="test-item-info">
+            {{testCase.testCaseName}} {{testCase.desc}}
+            <div class="test-item-script">{{testCase.func.toString()}}</div>
+        </div>
+    </div>
+
+
+    Test results:
+    <div class="test-item-list">
+        <div v-for="testCase in testSuite.testCases" class="test-item">
+            {{testCase.testCaseName}} {{testResultItems[$index] || 'Waiting...'}}
+        </div>
+    </div>
+
+    <div class="test-summary">{{testSummary}}</div>
+
+    <button class="btn-run-test" v-on:click="runTest">Run Test</button>
+</div>

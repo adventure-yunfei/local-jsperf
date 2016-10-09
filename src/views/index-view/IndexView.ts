@@ -1,6 +1,6 @@
 declare var Benchmark: any
 
-import testCases from '../../test-cases/testCases'
+import testSuites from '../../test-suites/testSuites'
 import {VueComponent} from 'vue-typescript'
 
 @VueComponent({
@@ -8,5 +8,5 @@ import {VueComponent} from 'vue-typescript'
     style: require('./IndexView.less')
 })
 export default class IndexView {
-    testCases = testCases
+    testSuites = testSuites
 }
